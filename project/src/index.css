@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes btn_loading {
+    0% {
+      width: 0;
+      margin-left: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+      margin-left: 100%;
+    }
+}

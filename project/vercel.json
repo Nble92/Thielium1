@@ -1,0 +1,11 @@
+{
+    "framework": "vite",
+    "outputDirectory": "dist",
+    "buildCommand": "export NODE_OPTIONS=--openssl-legacy-provider && npm run build",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
