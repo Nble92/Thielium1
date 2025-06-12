@@ -84,7 +84,8 @@ function App() {
             {/* Main */}
             <main className={`flex-1 pt-16 ${isSidebarHover ? "ml-64" : "ml-24"} ${isRightSidebarHover ? "mr-64" : "mr-24"}`} style={{
               backgroundImage: `url(${darkMode ? 'bg-dark.jpg' : 'bg-light.jpg'})`,
-              backgroundSize: '100% 100%'
+              backgroundSize: '100% 100%',
+              transition: 'margin-left 0.3s ease-in-out, margin-right 0.3s ease-in-out'
             }}>
               <Routes>
                 <Route path="/" element={<Landing />} />
