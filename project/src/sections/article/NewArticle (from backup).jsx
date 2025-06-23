@@ -30,7 +30,7 @@ const MultiStepArticleForm = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/api/categories/');
+        const res = await axios.get('https://aleflabs.net/api/categories/');
         console.log("✅ Categories response:", res.data);
         if (Array.isArray(res.data)) {
           setCategories(res.data);
@@ -52,7 +52,7 @@ const MultiStepArticleForm = () => {
     if (showModal && metadata?.query_hash) {
       interval = setInterval(async () => {
         try {
-          const res = await axios.get('http://127.0.0.1:8000/api/get_progress', {
+          const res = await axios.get('https://aleflabs.net/api/get_progress', {
             params: { query_hash: metadata.query_hash },
           });
           const current = res.data?.current;
@@ -77,7 +77,7 @@ const MultiStepArticleForm = () => {
   const handleQuery = async () => {
     try {
       setLoading(true);
-      const res = await axios.post('http://127.0.0.1:8000/api/new_article/', { query: input });
+      const res = await axios.post('https://aleflabs.net/api/new_article/', { query: input });
       setMetadata(res.data);
       setSuccess(false);
     } catch (err) {
@@ -102,7 +102,7 @@ const MultiStepArticleForm = () => {
       formData.append("doi", "10.1234/example.doi");  
       if (jupyterFile) formData.append("jupyter_file", jupyterFile);
 
-      await axios.post("http://127.0.0.1:8000/api/article/create/", formData, {
+      await axios.post("https://aleflabs.net/api/article/create/", formData, {
         headers: {
           "X-CSRFToken": csrftoken,  // ✅ Needed for Django CSRF
           "Authorization": `Bearer ${token}`,
@@ -133,7 +133,7 @@ const MultiStepArticleForm = () => {
       formData.append("citation_hash_ids", citationHashIds);
       if (jupyterFile) formData.append("jupyter_file", jupyterFile);
 
-      const response = await axios.post("http://127.0.0.1:8000/api/manual/create/", formData, {
+      const response = await axios.post("https://aleflabs.net/api/manual/create/", formData, {
         headers: {
           "X-CSRFToken": csrftoken,  // ✅ Needed for Django CSRF
           "Authorization": `Bearer ${token}`,
@@ -159,7 +159,7 @@ const MultiStepArticleForm = () => {
 
   const handleUpload = async (e) => {
     const csrfToken = getCookie('csrftoken');
-    await axios.post('http://127.0.0.1:8000/api/savefile/', form, {
+    await axios.post('https://aleflabs.net/api/savefile/', form, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'X-CSRFToken': csrfToken,
@@ -172,7 +172,7 @@ const MultiStepArticleForm = () => {
     form.append("query_hash", metadata.query_hash);
     form.append("save_file", e.target.file.files[0]);
     try {
-      await axios.post('http://127.0.0.1:8000/api/savefile/', form, {
+      await axios.post('https://aleflabs.net/api/savefile/', form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("✅ Jupyter file uploaded!");

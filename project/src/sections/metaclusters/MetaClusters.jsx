@@ -7,7 +7,7 @@ const MetaClusters = () => {
   useEffect(() => {
     const fetchClusters = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/article/metaclusters/');
+        const res = await axios.get('https://aleflabs.net/article/metaclusters/');
         console.log("✅ MetaClusters response:", res.data);
         setClusters(res.data.metaclusters || []);  // fallback
       } catch (err) {

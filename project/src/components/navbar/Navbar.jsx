@@ -55,7 +55,7 @@ export function Navbar({ setSidebarOpen, darkMode, setDarkMode }) {
         <div className="flex items-center">
           <div className="flex items-center gap-1 sm:gap-2">
             <img 
-              src={`${darkMode ? 'logo-light.png' : 'logo-dark.png'}`} 
+              src={`${darkMode ? '/logo-light.png' : '/logo-dark.png'}`} 
               className="w-8 sm:w-9 transition-all" 
               alt="Logo" 
             />

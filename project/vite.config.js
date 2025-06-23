@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: './',  // ✅ Add this line for relative asset resolution
+  base: '/',  // ✅ Add this line for relative asset resolution
   plugins: [react()],
   server: {
     host: '127.0.0.1',
@@ -20,17 +20,17 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8000',
+        target: 'https://aleflabs.net',
         changeOrigin: true,
         secure: false,
       },
       '/article/api': {
-        target: 'http://127.0.0.1:8000',
+        target: 'https://aleflabs.net',
         changeOrigin: true,
         secure: false,
       },
       '/article': {
-        target: 'http://127.0.0.1:8000',
+        target: 'https://aleflabs.net',
         changeOrigin: true,
         secure: false,
       },

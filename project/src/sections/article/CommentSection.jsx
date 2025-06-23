@@ -55,7 +55,7 @@ const CommentSection = ({ postId, refreshTrigger }) => {
       setPostingComment(true);
 
       await axios.post(
-        'http://127.0.0.1:8000/api/comments/new/',
+        'https://aleflabs.net/api/comments/new/',
         {
           post_id: postId,
           comment: newCommentText

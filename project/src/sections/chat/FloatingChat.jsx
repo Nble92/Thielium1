@@ -28,7 +28,7 @@ const FloatingChat = ({ friend, onClose }) => {
       >
         <div className="flex items-center gap-2">
           <img
-            src={`http://localhost:8000${friend.avatar || ''}`}
+            src={`https://aleflabs.net${friend.avatar || ''}`}
             alt={friend.username}
             className="w-6 h-6 rounded-full object-cover border border-white"
           />

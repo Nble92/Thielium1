@@ -15,7 +15,7 @@ const ChatRoom = ({ roomName = "room1", senderId = 1, receiverId = 2, senderName
 
     // 2. Open WebSocket connection
     const roomName = [user.id, friend.id].sort().join('_');
-    socketRef.current = new WebSocket(`ws://localhost:8000/ws/chat/${roomName}/`);
+    socketRef.current = new WebSocket(`ws://aleflabs.net/ws/chat/${roomName}/`);
  
 
     socket.onopen = () => {

@@ -797,7 +797,7 @@ const handleRepost = async () => {
                         <div className="bg-gray-900 border border-gray-700 rounded p-3 mb-4">
                           <div className="flex items-center gap-2 mb-2">
                             <img
-                              src={`http://localhost:8000${repostTarget.author.avatar}`}
+                              src={`https://aleflabs.net${repostTarget.author.avatar}`}
                               alt={repostTarget.author.username}
                               className="w-8 h-8 rounded-full border border-gray-600 object-cover"
                             />

@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { supabase } from "../../utils/supabase";
+import { useNavigate } from 'react-router-dom';
 
 export default function OAuthCallbackHandler() {
+  const navigate = useNavigate();
   useEffect(() => {
     const sendTokenToBackend = async () => {
       const { data: { session }, error } = await supabase.auth.getSession();
@@ -22,6 +24,11 @@ export default function OAuthCallbackHandler() {
 
       const result = await res.json();
       console.log("🎯 Backend response:", result);
+      if (result.message === "Login successful" && result.user) {
+        navigate("/")
+      } else {
+        navigate("/")
+      }
     };
 
     sendTokenToBackend();

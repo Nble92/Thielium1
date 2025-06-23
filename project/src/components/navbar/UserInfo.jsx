@@ -27,7 +27,7 @@ export function UserInfo({ user, onLogout }) {
             className="flex items-center gap-1 sm:gap-2 px-1 sm:px-2.5 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
           >
             <img 
-              src={`http://localhost:8000${user.avatar}`} 
+              src={`https://aleflabs.net${user.avatar}`} 
               className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center ring-2 ring-white dark:ring-gray-800"
             />
             <span className="hidden md:block text-sm font-medium text-gray-700 dark:text-gray-200">

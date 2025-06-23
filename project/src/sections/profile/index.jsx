@@ -180,7 +180,7 @@ function Profile() {
                     />
                   ) : (
                     <img
-                      src={`http://localhost:8000${user.avatar}`}
+                      src={`https://aleflabs.net${user.avatar}`}
                       alt={user.username}
                       className="w-24 h-24 rounded-full border-4 border-purple-500 dark:border-purple-400"
                     />

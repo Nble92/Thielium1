@@ -79,7 +79,7 @@ const ArticleDetail = () => {
 
   const fgRef = useRef();
 
-  const BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+  const BASE_URL = import.meta.env.VITE_API_URL || 'https://aleflabs.net';
   const [mainLocation, setMainLocation] = useState(null);
   const [citations, setCitations] = useState([]);
   const [hash, setHash] = useState(null);
@@ -332,7 +332,7 @@ useEffect(() => {
   
       try {
         const response = await axios.get(
-          `http://localhost:8000/article/main/${queryHash}/`,
+          `https://aleflabs.net/article/main/${queryHash}/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -409,14 +409,14 @@ useEffect(() => {
           <div className="w-full relative">
             {/* Light Mode Image */}
             <img 
-              src="http://localhost:8000/media/technology-abstract-lines-dots-connect-background-with-hexagons-hexagon-grid-hexagons-connection-digital-data-big-data-concept-hex-digital-data-visualization-illustration_230610-1076.JPG" 
+              src="https://aleflabs.net/media/technology-abstract-lines-dots-connect-background-with-hexagons-hexagon-grid-hexagons-connection-digital-data-big-data-concept-hex-digital-data-visualization-illustration_230610-1076.JPG" 
               alt="Top Banner Light" 
               className="w-full h-48 object-cover block dark:hidden"
             />
             
             {/* Dark Mode Image */}
             <img 
-              src="http://localhost:8000/media/slide-webinar-20230523_edited_edited.jpg" 
+              src="https://aleflabs.net/media/slide-webinar-20230523_edited_edited.jpg" 
               alt="Top Banner Dark" 
               className="w-full h-48 object-cover hidden dark:block"
             />
@@ -575,7 +575,7 @@ useEffect(() => {
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Citation Metrics</h2>
                 <iframe
-                  src={`http://127.0.0.1:8000/static/article/jupyter_files/${article.hash_id}.html`}
+                  src={`https://aleflabs.net/static/article/jupyter_files/${article.hash_id}.html`}
                   width="100%"
                   height="1200px"
                   style={{ border: 'none' }}

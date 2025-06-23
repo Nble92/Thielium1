@@ -16,7 +16,7 @@ const projectId = REOWN_ID
 const metadata = {
   name: 'AppKit',
   description: 'AppKit Example',
-  url: 'http://127.0.0.1:8000', // origin must match your domain & subdomain
+  url: 'https://aleflabs.net', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 

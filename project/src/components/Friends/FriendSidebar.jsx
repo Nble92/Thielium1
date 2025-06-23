@@ -56,7 +56,7 @@ const FriendSidebar = ({ setOpenChats }) => {
         ) : (
           friends.map((friend, idx) => {
             const avatarUrl = friend?.avatar
-              ? `http://localhost:8000${friend.avatar}`
+              ? `https://aleflabs.net${friend.avatar}`
               : 'https://ui-avatars.com/api/?name=Friend'; // fallback avatar
 
             return (
